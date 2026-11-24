@@ -7,7 +7,7 @@ HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 MARK_BEGIN="// >>> LegacyChromeTabs (managed by install.sh; edits inside are replaced)"
 MARK_END="// <<< LegacyChromeTabs"
 LOADER_MARK="LegacyChromeTabs loader"
-CHROME_FILES=(userChrome.css userContent.css ease-tab-drop.uc.js ct-settings.uc.js)
+CHROME_FILES=(userChrome.css userContent.css ease-tab-drop.uc.js ct-settings.uc.js ct-extensions.uc.js)
 # Gecko apps that aren't browsers, can't run this theme (UXP), or shouldn't be customized (Tor-style)
 SKIP_RE='thunderbird|betterbird|icedove|seamonkey|interlink|moonchild|pale ?moon|basilisk|tor-?browser|mullvad'
 
@@ -31,7 +31,7 @@ Usage: $(basename "$0") [options]
   --install-dir DIR    browser install folder for the script loader (with --profile)
   --theme NAME         glass (default) or classic
   --recommended-prefs  also set the prefs the theme was tuned with
-  --no-loader          skip the script loader (no sudo; no eased drop, no Colors panel)
+  --no-loader          skip the script loader (no sudo; no eased drop, no Colors panel, no extension auto-pin)
   --uninstall          remove what this script installed
   -y, --yes            don't ask before continuing
   -h, --help           show this help

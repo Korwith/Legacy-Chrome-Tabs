@@ -954,9 +954,16 @@ panel {
     mask: var(--ct-glyph-incognito) center / 16px 16px no-repeat;
 }
 
-/* address toolbar: hide Home, sidebar, account, Forget, spaces and the extensions button */
-#nav-bar :is(#home-button, #sidebar-button, #fxa-toolbar-menu-button, #fire-button, #unified-extensions-button),
+/* address toolbar: hide Home, sidebar, account, Forget and spaces */
+#nav-bar :is(#home-button, #sidebar-button, #fxa-toolbar-menu-button, #fire-button),
 #nav-bar toolbarspring:not(#vertical-spacer) {
+    display: none !important;
+}
+
+/* the extensions (puzzle) button holds every unpinned extension, and pinned ones that
+   overflow; ct-extensions.uc.js pins new extensions and flags the window when the panel
+   has none, so hide it only then (without the script loader it always shows) */
+:root[ct-extensions-all-pinned] #nav-bar:not([overflowing]) #unified-extensions-button {
     display: none !important;
 }
 

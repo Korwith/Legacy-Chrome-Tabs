@@ -19,7 +19,7 @@ Finds the default profile of every Gecko browser in your home folder (including 
 | `--profile DIR` / `--install-dir DIR` | one specific profile / install folder |
 | `--theme glass\|classic` | palette (default `glass`) |
 | `--recommended-prefs` | also set the prefs the theme was tuned with (compact density, no vertical tabs, full URLs, ...) |
-| `--no-loader` | no `sudo`; skips the eased tab drop and the Colors panel |
+| `--no-loader` | no `sudo`; skips the eased tab drop, the Colors panel and auto-pinning new extensions (the extensions button then stays visible) |
 | `--uninstall` | remove everything (files go to `<profile>/chrome/backup-<date>/`) |
 | `-y` | don't ask |
 
